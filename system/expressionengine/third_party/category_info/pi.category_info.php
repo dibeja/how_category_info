@@ -128,7 +128,22 @@ class Category_info {
 		ob_start();
 ?>
 
-Docs goes here...
+This little plugin lets you fetch category data and custom fields based on category id.
+It is like Category Heading, but without the hassle of the Channel Module.
+
+Example:
+{exp:category_info cat_id="[CAT ID]"}
+	{category_name}
+	{category_description}
+	{category_image}
+	{category_group}
+	{category_id}
+	{parent_id}
+	{your_custom_field}
+{/exp:category_info}
+
+It's as simple as that!
+
 <?php
 		$buffer = ob_get_contents();
 		ob_end_clean();
